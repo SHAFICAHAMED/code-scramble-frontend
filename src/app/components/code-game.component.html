@@ -1,0 +1,77 @@
+
+<!-- <div *ngIf="!joined" class="join-screen">
+  <h2>Enter your name to join the Game</h2>
+  <input [(ngModel)]="playerName" placeholder="Enter your name" />
+  <button (click)="joinGame()">Join Game</button>
+</div> -->
+
+<!-- Show Game Area After Joining -->
+<!-- <div *ngIf="joined">
+  <h2>Arrange the Code Blocks</h2>
+  <h3>Welcome, {{ playerName }}</h3>
+  <h3>Timer Left: {{ timer }} seconds</h3> -->
+
+  <!-- Drag-Drop Zone -->
+  <!-- <div cdkDropList class="code-container" (cdkDropListDropped)="drop($event)">
+    <div
+      class="code-block"
+      *ngFor="let line of codeBlocks"
+      cdkDrag
+    >
+      {{ line }}
+    </div> 
+  </div>-->
+
+  <!-- Submit Button -->
+  <!-- <button (click)="submitCode()">Submit Code</button>
+</div> -->
+
+<!-- Leaderboard -->
+<!-- <h2>🏆 Leaderboard</h2>
+<ul>
+  <li *ngFor="let player of leaderboard | keyvalue">
+    {{ player.value.name }}: {{ player.value.score }}
+  </li>
+</ul> -->
+
+
+<!-- add room match -->
+
+<!-- Show Join Screen -->
+ <input [(ngModel)]="roomId" placeholder="Enter yor roomId">
+ <button (click)="createRoom()">create Rooom</button>
+ <button (click)="joinRoom()">join </button>
+<div *ngIf="!joined" class="join-screen">
+  <h2>Enter your name to join the Game</h2>
+  <input [(ngModel)]="playerName" placeholder="Enter your name" />
+  <!-- <button (click)="joinGame()">Join Game</button> -->
+</div>
+
+<!-- Show Game Area After Joining -->
+<div *ngIf="joined">
+  <h2>Arrange the Code Blocks</h2>
+  <h3>Welcome, {{ playerName }}</h3>
+  <h3>Timer Left: {{ timer }} seconds</h3>
+
+  <!-- Drag-Drop Zone -->
+  <div cdkDropList class="code-container" (cdkDropListDropped)="drop($event)">
+    <div
+      class="code-block"
+      *ngFor="let line of codeBlocks"
+      cdkDrag
+    >
+      {{ line }}
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <button (click)="submitCode()">Submit Code</button>
+</div>
+
+<!-- Leaderboard -->
+<h2>🏆 Leaderboard</h2>
+<ul>
+  <li *ngFor="let player of leaderboard | keyvalue">
+    {{ player.value.name }}: {{ player.value.score }}
+  </li>
+</ul>

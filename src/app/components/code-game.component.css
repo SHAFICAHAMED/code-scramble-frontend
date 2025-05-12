@@ -1,0 +1,149 @@
+/* 🌟 General layout styling */
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* 🔐 Join screen */
+.join-screen {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #00b894;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #019875;
+}
+
+/* 🎯 Code block drag & drop container */
+.code-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* 🧩 Code line blocks */
+.code-block {
+  padding: 12px 16px;
+  background: #2d3436;
+  border-radius: 10px;
+  border: 1px solid #636e72;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  cursor: grab;
+  transition: transform 0.2s, background 0.3s;
+  font-family: 'Courier New', monospace;
+}
+
+.code-block:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+  background: #353b48;
+}
+
+/* 🕒 Timer style */
+h3 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+h3:nth-child(3) {
+  animation: pulse 1s infinite;
+}
+
+/* 🎖 Leaderboard */
+ul {
+  list-style: none;
+  padding: 0;
+  width: 300px;
+  margin-top: 1rem;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+/* 🌟 Highlight top player */
+li:first-child {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  animation: glow 1s infinite alternate;
+}
+
+/* 🔥 Animations */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #ffd700;
+  }
+  to {
+    box-shadow: 0 0 20px #ffd700, 0 0 30px #ffa502;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    color: #ffffff;
+  }
+  50% {
+    color: #ff7675;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .code-container {
+    width: 90%;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  ul {
+    width: 90%;
+  }
+}
